@@ -7,10 +7,10 @@
     <meta name="description" content="ДВОР — Путь бойца. Начало пути в маленьком тренировочном зале." />
     <title>ДВОР — Путь бойца</title>
     <link rel="icon" href="data:," />
-    <script type="module" crossorigin src="./assets/index-B7o5Jxyg.js"></script>
+    <script type="module" crossorigin src="./assets/index-CtkJO1ny.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-WkwZ5CU-.js">
     <link rel="modulepreload" crossorigin href="./assets/phaser-CmOm-Ik1.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-0hOEmkAk.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-Bx_pUFBJ.css">
   </head>
   <body>
     <main id="app" aria-label="ДВОР — Путь бойца">
@@ -29,17 +29,21 @@
         </button>
         <button id="preparation-action" class="bag-action preparation-action" aria-label="Открыть подготовку бойца" hidden><span class="object-label"><strong>ДОСКА</strong><span>Подготовка и приёмы</span></span></button>
         <button id="locker-action" class="bag-action locker-action" aria-label="Открыть шкафчик с приёмами" hidden><span class="object-label"><strong>ШКАФЧИК</strong><span>Три приёма на бой</span></span></button>
-        <section id="gym-console" class="gym-console" aria-label="Состояние бойца">
-          <div class="gym-meta"><div id="gym-stat-values" class="gym-stat-values" aria-label="Характеристики на бой"></div><p id="gym-budget"></p><p id="gym-gear"></p></div>
-          <div class="gym-context"><p id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true">Загружаем зал…</p><button id="gym-train" hidden>Тренироваться</button></div>
-          <div class="gym-controls"><div class="gym-shortcuts"><button id="gym-poster">Афиша</button><button id="gym-preparation">Боец</button><button id="gym-catalogue">Покупки</button></div>
+        <section id="gym-context" class="object-context" aria-labelledby="context-title" hidden>
+          <header><h2 id="context-title"></h2><button id="context-close" aria-label="Закрыть подсказку"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button></header>
+          <p id="context-effect"></p><p id="context-description"></p>
+          <div id="context-stats" hidden><div id="gym-stat-values" aria-label="Характеристики на бой"></div><p id="gym-budget"></p><p id="gym-gear"></p></div>
+          <p id="context-budget"></p><p id="context-note" hidden></p>
+          <button id="gym-train" class="context-primary" hidden>Тренироваться</button><button id="gym-open" class="context-primary" hidden></button>
+        </section>
+        <p id="feedback" class="room-announcement" role="status" aria-live="polite" aria-atomic="true">Загружаем зал…</p>
+        <p id="save-warning" class="room-notice" role="alert" hidden></p>
+        <p id="room-hint" class="room-hint" hidden></p>
         <nav id="pan-controls" class="pan-controls" aria-label="Осмотр зала" hidden>
           <button id="pan-left" aria-label="Осмотреть зал слева"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg></button>
           <span>Осмотреть зал <span class="desktop-hint">· ← → или перетаскивание</span></span>
           <button id="pan-right" aria-label="Осмотреть зал справа"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg></button>
         </nav>
-          </div>
-        </section>
         <noscript>Для загрузки зала включите JavaScript в браузере.</noscript>
       </section>
     </main>
