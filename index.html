@@ -7,10 +7,10 @@
     <meta name="description" content="ДВОР — Путь бойца. Начало пути в маленьком тренировочном зале." />
     <title>ДВОР — Путь бойца</title>
     <link rel="icon" href="data:," />
-    <script type="module" crossorigin src="./assets/index-CSXI9lz-.js"></script>
+    <script type="module" crossorigin src="./assets/index-CrmCmz-9.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-WkwZ5CU-.js">
     <link rel="modulepreload" crossorigin href="./assets/phaser-CmOm-Ik1.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-2wH4D3jf.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-CHGPLTZJ.css">
   </head>
   <body>
     <main id="app" aria-label="ДВОР — Путь бойца">
@@ -29,12 +29,17 @@
         </button>
         <button id="preparation-action" class="bag-action preparation-action" aria-label="Открыть подготовку бойца" hidden><span class="object-label"><strong>ДОСКА</strong><span>Подготовка и приёмы</span></span></button>
         <button id="locker-action" class="bag-action locker-action" aria-label="Открыть шкафчик с приёмами" hidden><span class="object-label"><strong>ШКАФЧИК</strong><span>Три приёма на бой</span></span></button>
+        <section id="gym-console" class="gym-console" aria-label="Состояние бойца">
+          <div class="gym-meta"><div id="gym-stat-values" class="gym-stat-values" aria-label="Характеристики на бой"></div><p id="gym-budget"></p><p id="gym-gear"></p></div>
         <p id="feedback" class="feedback" role="status" aria-live="polite">Загружаем зал…</p>
+          <div class="gym-controls"><div class="gym-shortcuts"><button id="gym-poster">Афиша</button><button id="gym-preparation">Боец</button><button id="gym-catalogue">Покупки</button></div>
         <nav id="pan-controls" class="pan-controls" aria-label="Осмотр зала" hidden>
           <button id="pan-left" aria-label="Осмотреть зал слева"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg></button>
           <span>Осмотреть зал <span class="desktop-hint">· ← → или перетаскивание</span></span>
           <button id="pan-right" aria-label="Осмотреть зал справа"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg></button>
         </nav>
+          </div>
+        </section>
         <noscript>Для загрузки зала включите JavaScript в браузере.</noscript>
       </section>
     </main>

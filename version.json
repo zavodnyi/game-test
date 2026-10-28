@@ -1,15 +1,15 @@
 {
-  "gameCommit": "c43f18e7d9326e91096b6b3bae7f1ac1550fc76a",
-  "builtUtc": "2026-10-28T05:07:34.628708+00:00",
-  "archiveSha256": "8fd8cd982f50e4af327804b382ba106d6ebf77ec4cf6f9082239c54e8b587f9f",
-  "archiveBytes": 10655163,
+  "gameCommit": "1e472457c5f10ddf3c67c9ad18460fff8fcd9ea9",
+  "builtUtc": "2026-10-28T05:47:46.350348+00:00",
+  "archiveSha256": "662b6f78893ed71df69dd82de32944e0cee44851821fc762c54f73c9cdc80f2e",
+  "archiveBytes": 10657408,
   "repository": "zavodnyi/game-test",
   "features": [
-    "rival-archetypes",
-    "rematches",
-    "purchases",
-    "four-gym-stations",
-    "skins-and-tattoo",
-    "promotion-help"
+    "clear-gym-console",
+    "pictured-object-hitareas",
+    "auto-equip",
+    "visible-gear",
+    "fixed-gate-v2",
+    "legacy-save-compatibility"
   ]
 }
