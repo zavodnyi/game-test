@@ -1,0 +1,15 @@
+{
+  "gameCommit": "c43f18e7d9326e91096b6b3bae7f1ac1550fc76a",
+  "builtUtc": "2026-10-28T05:07:34.628708+00:00",
+  "archiveSha256": "8fd8cd982f50e4af327804b382ba106d6ebf77ec4cf6f9082239c54e8b587f9f",
+  "archiveBytes": 10655163,
+  "repository": "zavodnyi/game-test",
+  "features": [
+    "rival-archetypes",
+    "rematches",
+    "purchases",
+    "four-gym-stations",
+    "skins-and-tattoo",
+    "promotion-help"
+  ]
+}

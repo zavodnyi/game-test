@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#263d36" />
+    <meta name="description" content="ДВОР — Путь бойца. Начало пути в маленьком тренировочном зале." />
+    <title>ДВОР — Путь бойца</title>
+    <link rel="icon" href="data:," />
+    <script type="module" crossorigin src="./assets/index-CSXI9lz-.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-WkwZ5CU-.js">
+    <link rel="modulepreload" crossorigin href="./assets/phaser-CmOm-Ik1.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-2wH4D3jf.css">
+  </head>
+  <body>
+    <main id="app" aria-label="ДВОР — Путь бойца">
+      <section id="stage" aria-label="Тренировочный зал" tabindex="0">
+        <div id="game" aria-hidden="true"></div>
+        <p class="build-note">ДВОР · ранняя версия</p>
+        <button id="bag-action" class="bag-action" aria-label="Тренироваться у груши" hidden>
+          <span class="object-label"><strong>ГРУША</strong><span id="strength-label">Сила 10 · +2</span><span id="bag-label">Тренироваться</span></span>
+        </button>
+        <button id="rope-action" class="bag-action station-action" aria-label="Тренировать скорость на скакалке" hidden><span class="object-label"><strong>СКАКАЛКА</strong><span id="speed-label">Скорость +2</span></span></button>
+        <button id="bench-action" class="bag-action station-action" aria-label="Тренировать выносливость с гантелями" hidden><span class="object-label"><strong>ГАНТЕЛИ</strong><span id="endurance-label">Выносливость +2</span></span></button>
+        <button id="pads-action" class="bag-action station-action" aria-label="Тренировать технику на лапах" hidden><span class="object-label"><strong>ЛАПЫ</strong><span id="technique-label">Техника +2</span></span></button>
+        <button id="catalogue-action" class="bag-action catalogue-action" aria-label="Открыть каталог покупок" hidden><span class="object-label"><strong>КАТАЛОГ</strong><span id="catalogue-label">Призовые: 0</span></span></button>
+        <button id="poster-action" class="bag-action poster-action" aria-label="Открыть афишу боёв" hidden>
+          <span class="object-label"><strong>АФИША</strong><span id="poster-label">Выбрать соперника</span></span>
+        </button>
+        <button id="preparation-action" class="bag-action preparation-action" aria-label="Открыть подготовку бойца" hidden><span class="object-label"><strong>ДОСКА</strong><span>Подготовка и приёмы</span></span></button>
+        <button id="locker-action" class="bag-action locker-action" aria-label="Открыть шкафчик с приёмами" hidden><span class="object-label"><strong>ШКАФЧИК</strong><span>Три приёма на бой</span></span></button>
+        <p id="feedback" class="feedback" role="status" aria-live="polite">Загружаем зал…</p>
+        <nav id="pan-controls" class="pan-controls" aria-label="Осмотр зала" hidden>
+          <button id="pan-left" aria-label="Осмотреть зал слева"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg></button>
+          <span>Осмотреть зал <span class="desktop-hint">· ← → или перетаскивание</span></span>
+          <button id="pan-right" aria-label="Осмотреть зал справа"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg></button>
+        </nav>
+        <noscript>Для загрузки зала включите JavaScript в браузере.</noscript>
+      </section>
+    </main>
+    <section id="fight-poster" class="scene-surface" data-object="poster" role="dialog" aria-modal="true" aria-labelledby="poster-title" hidden>
+      <div class="poster-sheet">
+        <img id="poster-art" class="poster-art" src="./assets/ui/fight-poster.webp" alt="" width="512" height="768" />
+        <header class="poster-header"><h1 id="poster-title">Афиша боёв</h1><button id="poster-close" class="object-close" aria-label="Закрыть афишу"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button></header>
+        <div class="poster-choices">
+          <p id="poster-round" class="poster-round"></p>
+          <details id="promotion-help" class="promotion-help"><summary>Как перейти в районную лигу?</summary><div id="promotion-help-body" class="promotion-help-body"></div></details>
+          <div id="offer-list" class="offer-list"></div><p id="poster-detail" aria-live="polite"></p><button id="poster-prepare" class="choose-offer">К тренировке</button>
+        </div>
+      </div>
+    </section>
+    <section id="preparation" class="scene-surface" data-object="training" data-step="training" role="dialog" aria-modal="true" aria-labelledby="preparation-title" hidden>
+      <div class="equipment-surface">
+        <header class="equipment-header"><h1 id="preparation-title">Доска тренировок</h1><button id="preparation-close" class="object-close" aria-label="Закрыть подготовку"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button></header>
+        <div id="preparation-opponent" class="opponent-note"></div>
+        <div id="training-menu">
+          <h2>Твой спорт</h2><div id="fighter-sport" class="sport-choice" role="group" aria-label="Базовый спорт"></div>
+          <h2 id="training-budget"></h2><div id="stat-training" class="stat-training"></div><p id="training-note"></p>
+          <button id="preparation-next" class="equipment-next">Выбрать приёмы</button>
+        </div>
+        <div id="moves-menu" hidden>
+          <p id="loadout-count"></p><div id="loadout-slots" class="loadout-slots"></div><div id="move-selection" class="move-selection"></div>
+          <p id="preparation-note" role="note"></p><footer class="locker-footer"><button id="preparation-back">К тренировкам</button><button id="start-battle" class="choose-offer">Выйти на бой</button><button id="simulate-battle" title="Автоматика выберет действия, а ты сразу увидишь итог">Рассчитать бой</button></footer>
+        </div>
+      </div>
+    </section>
+    <section id="catalogue" class="scene-surface" data-object="catalogue" role="dialog" aria-modal="true" aria-labelledby="catalogue-title" hidden>
+      <div class="catalogue-sheet">
+        <header class="catalogue-header"><h1 id="catalogue-title">Каталог бойца</h1><span id="catalogue-money"></span><button id="catalogue-close" class="object-close" aria-label="Закрыть каталог"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button></header>
+        <div class="catalogue-scroll">
+          <div class="catalogue-profile"><canvas id="catalogue-preview" width="320" height="192" role="img" aria-label="Твой боец в выбранной форме"></canvas><div><p id="catalogue-outfit"></p><p id="catalogue-stats"></p><p id="catalogue-collection"></p></div></div>
+          <figure id="catalogue-car" hidden><img id="catalogue-car-photo" alt="Твоя первая машина во дворе" width="240" height="160" /><figcaption>Первая машина · куплена на призовые</figcaption></figure>
+          <nav id="catalogue-categories" aria-label="Разделы каталога"></nav>
+          <p id="catalogue-note"></p><div id="catalogue-list"></div>
+        </div>
+        <footer class="catalogue-footer"><p id="catalogue-message" role="status" aria-live="polite">Выбери покупку. Призовые зарабатываются в боях.</p><p id="catalogue-save-note"></p></footer>
+      </div>
+    </section>
+    <section id="battle-hud" class="battle-hud" aria-label="Управление боем" hidden>
+      <div class="battle-scoreboards">
+        <div class="scoreboard"><strong>ТЫ</strong><label>Здоровье <progress id="player-health" max="100" value="100"></progress><span id="player-health-text"></span></label><label>Энергия <progress id="player-energy" max="30" value="30"></progress></label></div>
+        <div class="scoreboard enemy-scoreboard"><div class="enemy-identity"><img id="enemy-portrait" alt="" width="36" height="36" /><strong id="enemy-name"></strong></div><label>Здоровье <progress id="enemy-health" max="100" value="100"></progress><span id="enemy-health-text"></span></label><label>Энергия <progress id="enemy-energy" max="30" value="30"></progress></label></div>
+      </div>
+      <div class="battle-tools"><button id="battle-pause">Пауза</button><button id="battle-speed">Скорость ×1</button><button id="battle-auto">Авто: выкл</button><button id="battle-simulate">К результату</button><span id="battle-turn"></span></div>
+      <div class="battle-shelf"><p id="battle-message" role="status" aria-live="polite"></p><p id="battle-save-note"></p><div id="battle-actions" class="battle-actions"></div><button id="return-to-gym" class="choose-offer" hidden>Вернуться в зал</button><details id="battle-journal"><summary>Журнал боя</summary><ol id="battle-log"></ol></details></div>
+    </section>
+  </body>
+</html>
