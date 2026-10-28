@@ -7,10 +7,10 @@
     <meta name="description" content="ДВОР — Путь бойца. Начало пути в маленьком тренировочном зале." />
     <title>ДВОР — Путь бойца</title>
     <link rel="icon" href="data:," />
-    <script type="module" crossorigin src="./assets/index-CrmCmz-9.js"></script>
+    <script type="module" crossorigin src="./assets/index-B7o5Jxyg.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-WkwZ5CU-.js">
     <link rel="modulepreload" crossorigin href="./assets/phaser-CmOm-Ik1.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-CHGPLTZJ.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-0hOEmkAk.css">
   </head>
   <body>
     <main id="app" aria-label="ДВОР — Путь бойца">
@@ -31,7 +31,7 @@
         <button id="locker-action" class="bag-action locker-action" aria-label="Открыть шкафчик с приёмами" hidden><span class="object-label"><strong>ШКАФЧИК</strong><span>Три приёма на бой</span></span></button>
         <section id="gym-console" class="gym-console" aria-label="Состояние бойца">
           <div class="gym-meta"><div id="gym-stat-values" class="gym-stat-values" aria-label="Характеристики на бой"></div><p id="gym-budget"></p><p id="gym-gear"></p></div>
-        <p id="feedback" class="feedback" role="status" aria-live="polite">Загружаем зал…</p>
+          <div class="gym-context"><p id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true">Загружаем зал…</p><button id="gym-train" hidden>Тренироваться</button></div>
           <div class="gym-controls"><div class="gym-shortcuts"><button id="gym-poster">Афиша</button><button id="gym-preparation">Боец</button><button id="gym-catalogue">Покупки</button></div>
         <nav id="pan-controls" class="pan-controls" aria-label="Осмотр зала" hidden>
           <button id="pan-left" aria-label="Осмотреть зал слева"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg></button>
@@ -87,7 +87,7 @@
         <div class="scoreboard enemy-scoreboard"><div class="enemy-identity"><img id="enemy-portrait" alt="" width="36" height="36" /><strong id="enemy-name"></strong></div><label>Здоровье <progress id="enemy-health" max="100" value="100"></progress><span id="enemy-health-text"></span></label><label>Энергия <progress id="enemy-energy" max="30" value="30"></progress></label></div>
       </div>
       <div class="battle-tools"><button id="battle-pause">Пауза</button><button id="battle-speed">Скорость ×1</button><button id="battle-auto">Авто: выкл</button><button id="battle-simulate">К результату</button><span id="battle-turn"></span></div>
-      <div class="battle-shelf"><p id="battle-message" role="status" aria-live="polite"></p><p id="battle-save-note"></p><div id="battle-actions" class="battle-actions"></div><button id="return-to-gym" class="choose-offer" hidden>Вернуться в зал</button><details id="battle-journal"><summary>Журнал боя</summary><ol id="battle-log"></ol></details></div>
+      <div class="battle-shelf"><p id="battle-message" role="status" aria-live="polite"></p><p id="battle-save-note"></p><section id="battle-report" class="battle-report" aria-labelledby="battle-report-title" hidden><h2 id="battle-report-title">Разбор боя</h2><ul id="battle-report-facts"></ul><p id="battle-report-advice"></p></section><div id="battle-actions" class="battle-actions"></div><button id="return-to-gym" class="choose-offer" hidden>Вернуться в зал</button><details id="battle-journal"><summary>Журнал боя</summary><ol id="battle-log"></ol></details></div>
     </section>
   </body>
 </html>
